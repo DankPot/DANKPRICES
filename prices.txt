@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DANK POT PRICES</title>
+
+        <meta charset = "utf-8">
+		<link rel = "shortcut icon" type = "image/x-icon" href="Logo.ico" />
+
+		<meta name = "author" content = "Dank Pot" />
+		<meta name = "description" content = "Dank Pot" />
+		<meta name = "keywords" content = "DankBurgerz, DankBurgerz minecraft, iiMadShotz, iiMadShotz minecraft, DankBurgerz website, iiMadShotz website" />
+
+		<meta property = "og:title" content = "Dank Pot" />
+		<meta property = "og:description" content = "Official website for Dank Pots" />
+
+        <style>
+            body {
+				background-color: rgb(25, 25, 25);
+                color: white;
+                font-family: "Trebuchet MS";
+			}
+
+            body::-webkit-scrollbar {
+                width: 12px;
+            }
+      
+            body::-webkit-scrollbar-thumb {
+                background-color: rgb(80, 80, 80);
+            }
+
+            #pricesLabel {
+                background-color: rgb(25, 25, 25); 
+                color: rgb(255, 255, 255);
+                border: 0px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h4 id="pricesLabel"></h20>
+            <br>
+            <br>
+        </center>
+
+        <script type="text/javascript">
+            const pricesBox = document.getElementById("pricesLabel");
+
+            const prices = new XMLHttpRequest();
+            const pricesURL = "https://crishoux.github.io/OwlHub/Games.txt";
+            prices.open("GET", pricesURL, true);
+            prices.send();
+
+            prices.onreadystatechange = () => {
+                pricesBox.innerText = prices.responseText;
+            }
+        </script>
+    </body>
+</html>

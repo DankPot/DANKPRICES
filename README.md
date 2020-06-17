@@ -1,2 +1,0 @@
-# DANKPRICES
-Official DANK PRICES!
